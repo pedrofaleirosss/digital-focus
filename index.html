@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkpoint 2 - Front-end</title>
+    <title>Digital Focus | Home</title>
     <link rel="stylesheet" href="src/css/estilo.css" />
+    <script src="./src/js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,38 +18,38 @@
     />
   </head>
   <body>
-    <div id="container">
+    <div class="container">
       <main>
         <aside>
-          <h2 id="titulo">👨‍💻 Digital Focus</h2>
+          <h2 class="logo">👨‍💻 Digital Focus</h2>
           <nav>
-            <ul id="menu-lateral">
-              <li class="item-menu">
-                <a href="#">
+            <ul class="menu-lateral">
+              <li class="item-menu" style="text-decoration: underline">
+                <a href="/">
                   <span class="icon"><i class="bi bi-house"></i></span>
                   <span>Home</span>
                 </a>
               </li>
               <li class="item-menu">
-                <a href="#">
+                <a href="./src/pages/tarefas.html">
                   <span class="icon"><i class="bi bi-list-task"></i></span>
                   <span>Tarefas</span>
                 </a>
               </li>
               <li class="item-menu">
-                <a href="#">
+                <a href="./src/pages/anotacoes.htm">
                   <span class="icon"><i class="bi bi-clipboard"></i></span>
                   <span>Anotações</span>
                 </a>
               </li>
               <li class="item-menu">
-                <a href="#">
+                <a href="./src/pages/configuracoes.html">
                   <span class="icon"><i class="bi bi-gear"></i></span>
                   <span>Configurações</span>
                 </a>
               </li>
               <li class="item-menu">
-                <a href="#">
+                <a href="./src/pages/meu-perfil.html">
                   <span class="icon"><i class="bi bi-person"></i></span>
                   <span>Meu Perfil</span>
                 </a>
@@ -56,10 +57,59 @@
             </ul>
           </nav>
         </aside>
-        <section id="conteudo"></section>
+
+        <section class="conteudo">
+          <div class="conteudo-titulos">
+            <h1 class="titulo">Bem-vindo ao seu espaço de foco 💡</h1>
+            <h1 class="horas">00:00:00</h1>
+          </div>
+
+          <div class="card-container">
+            <div class="card">
+              <h3>Tarefa</h3>
+              <input
+                type="text"
+                placeholder="Digite o nome da sua tarefa"
+                class="campo-texto"
+              />
+              <button class="botao">Adicionar Tarefa</button>
+            </div>
+
+            <div class="card" style="text-align: center">
+              <h3>Tempo de Foco</h3>
+              <p class="relogio-pomodoro" id="tempo-foco">25:00</p>
+              <button class="botao">Iniciar</button>
+            </div>
+
+            <div class="card" style="text-align: center">
+              <h3>Tempo de Descanso</h3>
+              <p class="relogio-pomodoro" id="tempo-descanso">05:00</p>
+              <button class="botao">Iniciar</button>
+            </div>
+
+            <div class="card">
+              <h3>Anotações</h3>
+              <textarea
+                name="anotacoes"
+                placeholder="Digite sua anotação"
+                class="campo-texto"
+                rows="6"
+              ></textarea>
+              <div class="botao-container">
+                <button class="botao">Adicionar Anotações</button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer>
-        <p>&copy; - 2025 - Todos os direitos reservados</p>
+
+      <footer class="rodape">
+        <p>Checkpoint 2 | Front-end Design | FIAP</p>
+        <p>
+          Pedro Faleiros | Luan Felix | Felipe Campos | João Lopes | Leandro
+          Farias
+        </p>
+        <p>&copy; 2025 - Todos os direitos reservados</p>
       </footer>
     </div>
   </body>
